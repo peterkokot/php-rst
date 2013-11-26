@@ -1,9 +1,9 @@
 {
-    "name": "maastermedia/php-rst",
+    "name": "peterkokot/php-rst",
     "type": "library",
     "description": "reStructuredText PHP library",
     "keywords": ["rst"],
-    "homepage": "https://github.com/maastermedia/php-rst",
+    "homepage": "https://github.com/peterkokot/php-rst",
     "license": "MIT",
     "authors": [
         {
@@ -19,7 +19,7 @@
         "phpunit/phpunit": "~3.7.0"
     },
     "autoload": {
-        "psr-0" : {"PhpWhois" : "src/"}
+        "psr-0" : {"Rst" : "src/"}
     },
     "minimum-stability": "dev",
     "extra": {
