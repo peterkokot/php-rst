@@ -22,8 +22,8 @@ class FixCommand extends Command
     protected function configure()
     {
         $this
-            ->setName('rst:fix')
-            ->setDescription('Fix Rst')
+            ->setName('fix')
+            ->setDescription('Fix reStructuredText')
             ->addArgument(
                 'name',
                 InputArgument::OPTIONAL,

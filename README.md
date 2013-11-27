@@ -14,6 +14,9 @@ $ php composer.phar install
 $ php php-rst.php
 ```
 
+**Note:** Windows does not support ANSI colors by default. If you want
+to have ANSI color support on Windows please install [ANSICON](https://github.com/adoxa/ansicon/downloads).
+
 ## Functionalities
 
 * RST fixer

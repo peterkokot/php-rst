@@ -12,8 +12,7 @@
 
 require_once __DIR__.'/vendor/autoload.php';
 
-use Rst\Command\FixCommand;
-use Symfony\Component\Console\Application;
+use Rst\Application;
 
 $application = new Application();
 $application->run();
