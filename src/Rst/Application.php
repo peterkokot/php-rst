@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the php-rst package.
+ * This file is part of the phprst package.
  *
  * (c) Peter Kokot <peterkokot@gmail.com>
  *

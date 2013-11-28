@@ -1,9 +1,9 @@
 {
-    "name": "peterkokot/php-rst",
+    "name": "peterkokot/phprst",
     "type": "library",
     "description": "reStructuredText PHP library",
     "keywords": ["rst"],
-    "homepage": "https://github.com/peterkokot/php-rst",
+    "homepage": "https://github.com/peterkokot/phprst",
     "license": "MIT",
     "authors": [
         {

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the php-rst package.
+ * This file is part of the phprst package.
  *
  * (c) Peter Kokot <peterkokot@gmail.com>
  *
@@ -22,7 +22,7 @@ class CompileCommand extends Command
     {
         $this
             ->setName('compile')
-            ->setDescription('Compiles this library into a phar file.')
+            ->setDescription('Compiles reStructuredText library into a phar file.')
         ;
     }
 

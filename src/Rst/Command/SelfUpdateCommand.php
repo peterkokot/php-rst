@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the php-rst package.
+ * This file is part of the phprst package.
  *
  * (c) Peter Kokot <peterkokot@gmail.com>
  *
@@ -21,7 +21,7 @@ class SelfUpdateCommand extends Command
     {
         $this
             ->setName('self-update')
-            ->setDescription('Updates php-rst to the latest version.')
+            ->setDescription('Updates phprst to the latest version.')
         ;
     }
 

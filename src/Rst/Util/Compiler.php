@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the php-rst package.
+ * This file is part of the phprst package.
  *
  * (c) Peter Kokot <peterkokot@gmail.com>
  *
@@ -20,13 +20,13 @@ use Symfony\Component\Finder\Finder;
 */
 class Compiler
 {
-    public function compile($pharFile = 'php-rst.phar')
+    public function compile($pharFile = 'phprst.phar')
     {
         if (file_exists($pharFile)) {
             unlink($pharFile);
         }
 
-        $phar = new \Phar($pharFile, 0, 'php-rst.phar');
+        $phar = new \Phar($pharFile, 0, 'phprst.phar');
         $phar->setSignatureAlgorithm(\Phar::SHA1);
 
         $phar->startBuffering();
@@ -55,17 +55,17 @@ class Compiler
      *
      * @param \Phar $phar PHAR instance
      */
-    protected function addPhpRst(\Phar $phar)
+    protected function addRst(\Phar $phar)
     {
-        $content = file_get_contents(__DIR__ . '/../../../php-rst');
+        $content = file_get_contents(__DIR__ . '/../../../../phprst');
         $content = preg_replace('{^#!/usr/bin/env php\s*}', '', $content);
 
-        $phar->addFromString('php-rst', $content);
+        $phar->addFromString('phprst', $content);
     }
 
     protected function getStub()
     {
-        return "#!/usr/bin/env php\n<?php Phar::mapPhar('php-rst.phar'); require 'phar://php-rst.phar/php-rst'; __HALT_COMPILER();";
+        return "#!/usr/bin/env php\n<?php Phar::mapPhar('phprst.phar'); require 'phar://phprst.phar/phprst'; __HALT_COMPILER();";
     }
 
     protected function getLicense()
@@ -83,7 +83,7 @@ class Compiler
 
     protected function getFiles()
     {
-        $iterator = Finder::create()->files()->exclude('Tests')->name('*.php')->in(array('vendor', 'Symfony'));
+        $iterator = Finder::create()->files()->exclude('Tests')->name('*.php')->in(array('vendor'));
 
         return array_merge(array('LICENSE'), iterator_to_array($iterator));
     }
