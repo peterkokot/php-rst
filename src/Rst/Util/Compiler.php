@@ -57,7 +57,7 @@ class Compiler
      */
     protected function addRst(\Phar $phar)
     {
-        $content = file_get_contents(__DIR__ . '/../../../../phprst');
+        $content = file_get_contents(__DIR__ . '/../../../phprst.php');
         $content = preg_replace('{^#!/usr/bin/env php\s*}', '', $content);
 
         $phar->addFromString('phprst', $content);
@@ -83,7 +83,7 @@ class Compiler
 
     protected function getFiles()
     {
-        $iterator = Finder::create()->files()->exclude('Tests')->name('*.php')->in(array('vendor'));
+        $iterator = Finder::create()->files()->exclude('Tests')->name('*.php')->in(array('vendor', 'src'));
 
         return array_merge(array('LICENSE'), iterator_to_array($iterator));
     }
