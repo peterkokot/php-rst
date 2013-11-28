@@ -1,5 +1,7 @@
 # PHP reStructuredText library
 
+[![Build Status](https://secure.travis-ci.org/peterkokot/phprst.png?branch=master)](http://travis-ci.org/peterkokot/phprst)
+
 ## About
 
 PHP reStructuredText library
