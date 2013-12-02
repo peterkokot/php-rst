@@ -16,6 +16,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
+use Rst\Fixer;
 
 class FixCommand extends Command
 {
@@ -25,9 +26,9 @@ class FixCommand extends Command
             ->setName('fix')
             ->setDescription('Fix reStructuredText')
             ->addArgument(
-                'name',
-                InputArgument::OPTIONAL,
-                'Who do you want to greet?'
+                'files',
+                InputArgument::REQUIRED,
+                'Add the location of reStructuredText files.'
             )
             ->addOption(
                'yell',
@@ -40,16 +41,11 @@ class FixCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $name = $input->getArgument('name');
-        if ($name) {
-            $text = 'Hello '.$name;
-        } else {
-            $text = 'Hello';
-        }
-
-        if ($input->getOption('yell')) {
-            $text = strtoupper($text);
-        }
+        $files = $input->getArgument('files');
+        
+        $fixer = new Fixer($files);
+        $fixer->fix();
+        $text = $fixer->getReport();
 
         $output->writeln($text);
     }

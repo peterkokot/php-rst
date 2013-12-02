@@ -27,7 +27,7 @@ class SelfUpdateCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $remoteFilename = 'http://phprst.maastermedia.org/get/phprst.phar';
+        $remoteFilename = 'http://phprst.maastermedia.org/phprst.phar';
         $localFilename = $_SERVER['argv'][0];
         $tempFilename = basename($localFilename, '.phar').'-temp.phar';
 

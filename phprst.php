@@ -16,3 +16,16 @@ use Rst\Application;
 
 $application = new Application();
 $application->run();
+
+// filesystem component testing
+use Symfony\Component\Filesystem\Filesystem;
+use Symfony\Component\Filesystem\Exeption\IOExceptionInterface;
+
+$fs = new Filesystem();
+
+try {
+    
+} catch (IOExceptionInterface $e) {
+    echo "An error occured.";
+}
+
