@@ -13,7 +13,7 @@ $ git clone git://github.com/peterkokot/phprst.git
 $ cd phprst
 $ curl -sS https://getcomposer.org/installer | php
 $ php composer.phar install
-$ php phprst.php
+$ bin/phprst
 ```
 
 **Note:** Windows does not support ANSI colors by default. If you want

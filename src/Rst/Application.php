@@ -28,7 +28,6 @@ class Application extends BaseApplication
         parent::__construct('PHP reStructuredText', '1.0-dev');
 
         $this->add(new FixCommand());
-        $this->add(new CompileCommand());
         $this->add(new SelfUpdateCommand());
     }
 }
