@@ -1,6 +1,6 @@
 # PHP reStructuredText library
 
-[![Build Status](https://secure.travis-ci.org/peterkokot/phprst.png?branch=master)](http://travis-ci.org/peterkokot/phprst)
+[![Build Status](https://secure.travis-ci.org/petk/phprst.png?branch=master)](http://travis-ci.org/petk/phprst)
 
 ## About
 
@@ -9,7 +9,7 @@ PHP reStructuredText library
 ## Installation
 
 ```bash
-$ git clone git://github.com/peterkokot/phprst.git
+$ git clone git://github.com/petk/phprst.git
 $ cd phprst
 $ curl -sS https://getcomposer.org/installer | php
 $ php composer.phar install
