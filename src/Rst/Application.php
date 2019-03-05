@@ -13,7 +13,6 @@ namespace Rst;
 
 use Symfony\Component\Console\Application as BaseApplication;
 use Rst\Command\FixCommand;
-use Rst\Command\CompileCommand;
 use Rst\Command\SelfUpdateCommand;
 
 class Application extends BaseApplication

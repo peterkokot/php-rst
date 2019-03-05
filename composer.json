@@ -12,16 +12,18 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "symfony/console": "~2.4",
-        "symfony/filesystem": "~2.4",
-        "symfony/finder": "~2.4"
+        "php": "^7.1",
+        "symfony/console": "^4.0",
+        "symfony/filesystem": "^4.0",
+        "symfony/finder": "^4.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~3.7.0"
+        "phpunit/phpunit": "^7.0"
     },
     "autoload": {
-        "psr-0" : {"Rst" : "src/"}
+        "psr-4" : {
+            "Rst\\" : "src/Rst/"
+        }
     },
     "minimum-stability": "dev",
     "extra": {
