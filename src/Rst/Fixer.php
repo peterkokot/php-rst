@@ -25,12 +25,12 @@ class Fixer
     public function fix()
     {
         $finder = new Finder();
-        $finder->files()->in($folder);
+        $finder->files()->in($this->folder);
 
         foreach ($finder as $file) {
-            $content = file_get_contents($file ->getRealpath());
-            while ($lastPos = strpos($content, '.. `') {
-                $this->report .= $file->getRelativepath()."\n";
+            $content = file_get_contents($file->getRealpath());
+            if (strpos($content, '.. `') !== false) {
+                $this->report .= $file->getRealpath()."\n";
             }
         }
     }
